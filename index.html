@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Curriculo Online</title>
+</head>
+
+<body>
+    <header>
+        <div class="nome">
+            <h1 id="nome">Rafael Augusto</h1>
+            <h1 id="funcao">Desenvolvedor FullStack</h1>
+        </div>
+        <div class="menu">
+            <nav>
+                <a href="conteudo/sobreMim.html">Sobre Mim</a>
+                <a href="conteudo/experiencia.html">Expêriencia</a>
+                <a href="conteudo/contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <section class="conteudo">
+        <div id="conteudo">
+            <div id="foto"><img src="img/foto.jpg" alt="Rafael Augusto" height="250" width="200" align="left"></div>
+            <div id="sobreMim">
+                <p class="titulo" id="tituloComFoto">Sobre Mim</p>
+                <p class="texto">Meu nome é Rafael Augusto da
+                    Silva, tenho 22 anos, nasci e moro na
+                    cidade de Extrema Minas Gerais. Sou formado em Análise e
+                    Desenvolvimento de Sistemas pela FAEX - Faculdade de Extrema.
+                    Sou uma pessoa proativa e que tem muita vontade de aprender coisas novas.
+                </p>
+            </div>
+    </section>
+    <footer class="rodape">
+        <h3>@Rafael Augusto da Silva 2022 </h3>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
+</body>
+
+</html>

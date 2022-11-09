@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.nome,
+.menu {
+    display: inline-block;
+}
+
+.menu {
+    position: absolute;
+    top: 30px;
+    right: 200px;
+    width: 400px;
+    font-size: 20px;
+}
+
+.nome {
+    font-family: Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+
+
+#conteudo {
+    padding: 30px 0px;
+}
+
+.conteudo {
+    padding: 10%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:hover {
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.rodape {
+    bottom: 0;
+    right: 10px;
+    width: 300px;
+    position: absolute;
+}
+
+#funcao {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#nome {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.conteudo {
+    position: relative;
+    padding-top: 0;
+}
+
+.titulo {
+    font-size: 50px;
+}
+
+#tituloComFoto {
+    margin-top: 0;
+}
+
+.texto {
+    font-size: 30px;
+}
+
+#sobreMim {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+img {
+    margin: 15px;
+    border-style: outset;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        display: none;
+    }
+
+    .titulo {
+        font-size: 30px;
+
+    }
+
+    .texto {
+        font-size: 20px;
+    }
+
+    img {
+        display: none;
+    }
+
+    .nome,
+    .menu {
+        display: contents;
+    }
+
+    .menu {
+        margin-right: 100px;
+    }
+}
